@@ -7,6 +7,7 @@ import ru.avbugorov.vaadinaw.data.entity.Client;
 @Data
 @NoArgsConstructor
 public class ClientViewDto {
+
     Long id;
     String name;
     String passport;
@@ -22,4 +23,5 @@ public class ClientViewDto {
         clientDto.setPhone(client.getPhone());
         return clientDto;
     }
+
 }

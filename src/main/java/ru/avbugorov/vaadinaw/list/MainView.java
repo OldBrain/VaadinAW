@@ -58,6 +58,7 @@ public class MainView extends VerticalLayout {
         filterText.setValueChangeMode(ValueChangeMode.LAZY);
         // final VerticalLayout filterLayout = new VerticalLayout();
 
+//       grid.getHeaderRows().stream(p -> System.out.println(p));
 
     }
 
@@ -65,6 +66,14 @@ public class MainView extends VerticalLayout {
         grid.setItems(list.stream()
                 .filter(clientViewDto -> clientViewDto.getName().contains(fText))
                 .collect(Collectors.toList()));
+
+
+        /**
+         * Возвращает содержание колонки 1
+         * Нумерация с 1
+         * */
+        grid.getColumns().get(1).getKey();
+        System.out.println("**** = "+grid.getColumns().get(1).getKey());
     }
 
 //    public MainView() {
